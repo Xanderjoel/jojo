@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript -- Number guessing</h2>
+
+<button onclick="startGame()">Start game</button>
+
+<script>
+var rand = Math.floor((Math.random() * 10) + 1);
+
+function startGame() {
+ var userGuess = prompt("Guess a number between 1 and 10:");
+
+ while (userGuess != rand) {
+    if (userGuess < rand) {
+      userGuess = prompt("Too low! Try again:");
+    } else {
+      userGuess = prompt("Too high! Try again:");
+    }
+ }
+
+ alert("Congratulations! You guessed the correct number: " + rand);
+}
+</script>
+
+</body>
+</html>
